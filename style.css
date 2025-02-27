@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+  /*  position: relative;
+    background: url('https://www.gaceta.unam.mx/wp-content/uploads/2022/03/220331-aca7-des-f1-autismo.jpg') no-repeat center center/cover;*/
+}
+
+p{
+    line-height: 2;
+    color: #187dea;
+    
+}
+/*Menú de navegación */
+.menu-nav {
+    background-color: rgb(222, 220, 234);
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav .nav-link {
+    color: #333;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #187dea;
+}
+/*Sección del Centro*/
+.hero {
+ /*   background: url('https://resiplus.mx/wp-content/uploads/2022/05/El-autismo-es-una-condicion-que-permanece-durante-toda-la-vida.jpeg') no-repeat center center/cover;*/
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+/*.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad según sea necesario 
+    z-index: 1;
+}*/
+.hero h2, .hero p {
+    position: relative;
+    z-index: 2;
+}
+.hero h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+.container .btn {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 25px;
+}
+.imag-Center{
+    display: block;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad según sea necesario */
+}
+.container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+} 
+.centered-image {
+        margin-top: 0%; /* Ajusta el margen superior según sea necesario */
+}
+/* New background image section */
+/*.background-image-section {
+    background: url('https://www.gaceta.unam.mx/wp-content/uploads/2022/03/220331-aca7-des-f1-autismo.jpg') no-repeat center center/cover;
+    height: 300px; /* Adjust the height as needed 
+}*/

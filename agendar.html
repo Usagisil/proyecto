@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> 
+    <link rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" 
+    href="styles.css">
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <nav class="menu-nav d-flex align-items-center">
+        <div>
+            <a class="navbar-brand" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaDDpyVF623UHbQQfbAT318PhPMpJr4XO5rb4TLBGInxfQPMznuQ5pk7W0-aIm7JYcZkM&usqp=CAU">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaDDpyVF623UHbQQfbAT318PhPMpJr4XO5rb4TLBGInxfQPMznuQ5pk7W0-aIm7JYcZkM&usqp=CAU" alt="Logo" height="110">
+            </a>
+        </div>
+                   <ul class="nav">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="recepcion.html">Recepción</a></li>
+                    <li class="nav-item"><a class="nav-link" href="direccion.html">Dirección</a></li>
+                    <li class="nav-item"><a class="nav-link" href="terapia.html">Terapeutas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="padres.html">Padres</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Sobre mí</a></li>
+                    
+                </ul>
+         
+    </nav> 
+    <!-- Formulario de Registro para Agendar Citas -->
+    <div class="container my-4">
+        <h2 class="text-center">Agendar Cita</h2>
+        <form>
+            <h4>Datos Padre, Madre o Tutor Solicitante</h4>
+            <div class="mb-3">
+                <label for="nombreSolicitante" class="form-label">Nombre(s)</label>
+                <input type="text" class="form-control" id="nombreSolicitante" required>
+            </div>
+            <div class="mb-3">
+                <label for="primerApellidoSolicitante" class="form-label">Primer Apellido</label>
+                <input type="text" class="form-control" id="primerApellidoSolicitante" required>
+            </div>
+            <div class="mb-3">
+                <label for="segundoApellidoSolicitante" class="form-label">Segundo Apellido</label>
+                <input type="text" class="form-control" id="segundoApellidoSolicitante" required>
+            </div>
+            <div class="mb-3">
+                <label for="telefonoSolicitante" class="form-label">Teléfono</label>
+                <input type="tel" class="form-control" id="telefonoSolicitante" required>
+            </div>
+            <div class="mb-3">
+                <label for="diaCita" class="form-label">Día(Solo citas de Lunes a Viernes)</label>
+                <input type="date" class="form-control" id="diaCita" required>
+            </div>
+            <div class="mb-3">
+                <label for="horaCita" class="form-label">Hora</label>
+                <select class="form-select" id="horaCita" required>
+                    <option value="10:00">10:00 AM</option>
+                    <option value="11:00">11:00 AM</option>
+                    <option value="12:00">12:00 PM</option>
+                    <option value="13:00">1:00 PM</option>
+                    <option value="14:00">2:00 PM</option>
+                    <option value="15:00">3:00 PM</option>
+                    <option value="16:00">4:00 PM</option>
+                    <option value="17:00">5:00 PM</option>
+                </select>
+            </div>
+            <hr>
+            <h4>Datos del Infante</h4>
+            <div class="mb-3">
+                <label for="nombreInfante" class="form-label">Nombre(s)</label>
+                <input type="text" class="form-control" id="nombreInfante" required>
+            </div>
+            <div class="mb-3">
+                <label for="primerApellidoInfante" class="form-label">Primer Apellido</label>
+                <input type="text" class="form-control" id="primerApellidoInfante" required>
+            </div>
+            <div class="mb-3">
+                <label for="segundoApellidoInfante" class="form-label">Segundo Apellido</label>
+                <input type="text" class="form-control" id="segundoApellidoInfante" required>
+            </div>
+            <div class="mb-3">
+                <label for="edadInfante" class="form-label">Edad</label>
+                <div class="d-flex">
+                    <input type="number" class="form-control me-2" id="edadInfanteAnios" placeholder="Años" required>
+                    <input type="number" class="form-control" id="edadInfanteMeses" placeholder="Meses" required>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="descripcionCita" class="form-label">Descripción del porqué solicita una cita</label>
+                <textarea class="form-control" id="descripcionCita" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Agendar Cita</button>
+        </form>
+    </div>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
+</body>
+</html>
