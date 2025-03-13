@@ -1,4 +1,3 @@
-
 // Constructor
 function RegistroAgendarCita(nombreSolicitante, primerApellidoSolicitante, segundoApellidoSolicitante, telefonoSolicitante, diaCita, horaCita, nombreInfante, primerApellidoInfante, segundoApellidoInfante, descripcionCita) {
     this.nombreSolicitante = nombreSolicitante;
@@ -12,7 +11,6 @@ function RegistroAgendarCita(nombreSolicitante, primerApellidoSolicitante, segun
     this.segundoApellidoInfante = segundoApellidoInfante;
     this.descripcionCita = descripcionCita;
 }
-
 
 // Obtener los inputs del HTML
 const inputNombreSolicitante = document.getElementById("txtNombreSolicitante");
@@ -35,7 +33,7 @@ function agendar() {
         alert("Favor de llenar el campo de Nombre del Solicitante");
         return;
     }
-    let nuevaCita = new RegistroAgendarCita(
+    const nuevaCita = new RegistroAgendarCita(
         inputNombreSolicitante.value, 
         inputPrimerApellidoSolicitante.value, 
         inputSegundoApellidoSolicitante.value, 
@@ -48,33 +46,39 @@ function agendar() {
         inputDescripcionCita.value
     );
     citas.push(nuevaCita);
-    localStorage.setItem("citas", JSON.stringify(citas));
-    displayCitas();
-    inputNombreSolicitante.value = "";
-    inputPrimerApellidoSolicitante.value = "";
-    inputSegundoApellidoSolicitante.value = "";
-    inputTelefono.value = "";
-    inputDiaCita.value = "";
-    inputHoraCita.value = "";
-    inputNombreInfante.value = "";
-    inputPrimerApellidoInfante.value = "";
-    inputSegundoApellidoInfante.value = "";
-    inputDescripcionCita.value = "";
+    localStorage.setItem('citas', JSON.stringify(citas));
+    window.location.href = 'listaCitas.html';
 }
 
-  // Mostrar citas en pantalla
+// Mostrar citas en pantalla
 function displayCitas() {
     const list = document.getElementById("list");
+    if(!list) return;
     list.innerHTML = "";
     citas.forEach((cita, index) => {
         let citaElement = `
-        <div>
-            <p>${cita.nombreSolicitante} ${cita.primerApellidoSolicitante} ${cita.segundoApellidoSolicitante} - ${cita.telefonoSolicitante} - ${cita.diaCita} - ${cita.horaCita} - ${cita.nombreInfante} ${cita.primerApellidoInfante} ${cita.segundoApellidoInfante} - ${cita.descripcionCita}</p>
-            <button class="btn btn-warning" onclick="deleteCita(${index})">Eliminar</button>
-        </div>
+        <tr>
+            <td>${cita.nombreSolicitante}</td>
+            <td>${cita.primerApellidoSolicitante}</td>
+            <td>${cita.segundoApellidoSolicitante}</td>
+            <td>${cita.telefonoSolicitante}</td>
+            <td>${cita.diaCita}</td>
+            <td>${cita.horaCita}</td>
+            <td>${cita.nombreInfante}</td>
+            <td>${cita.primerApellidoInfante}</td>
+            <td>${cita.segundoApellidoInfante}</td>
+            <td>${cita.descripcionCita}</td>
+            <td><button class="btn btn-warning" onclick="deleteCita(${index})">Eliminar</button></td>
+        </tr>
         `;
         list.innerHTML += citaElement;
     });
+      // Mostrar u ocultar el botón de borrar todas las citas
+      if (citas.length > 0) {
+        clearButton.style.display = "block";
+    } else {
+        clearButton.style.display = "none";
+    }
 }
 
 // Eliminar una cita
@@ -93,9 +97,3 @@ function clearStorage() {
 
 // Mostrar citas al cargar la página
 document.addEventListener("DOMContentLoaded", displayCitas);
-
-/*Para probar el código sin el HTML
-let request1=new RegistroAgendarCita("Juan", "Perez", "Gomez", "1234567890", "2021-10-15", "10:00", "Pedro", "Perez", "Gomez", "Consulta de rutina");
-let request2=new RegistroAgendarCita("Maria", "Gomez", "Perez", "0987654321", "2021-10-15", "11:00", "Juan", "Gomez", "Perez",  "Consulta de rutina");
-display(request1);
-display(request2);*/

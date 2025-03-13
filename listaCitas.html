@@ -24,14 +24,53 @@
          <li class="nav-item"><a class="nav-link" href="recepcion.html">Recepción</a></li>
          <li class="nav-item"><a class="nav-link" href="direccion.html">Dirección</a></li>
          <li class="nav-item"><a class="nav-link" href="terapia.html">Terapeutas</a></li>
-         <li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
          <li class="nav-item"><a class="nav-link" href="padres.html">Padres</a></li>
+         <li class="nav-item"><a class="nav-link" href="eventoslog.html">Eventos</a></li>
+        
          
       </ul>
    <a href="index.html" class="btn btn-danger ms-auto">Cerrar Sesión</a>
    </nav> 
+   <div class="container mt-4">
+      <h2>Lista de Citas</h2>
+      <table class="table table-bordered text-center" style="background-color: #bfe5ef; border-color: #bbaad1; border-width: 5px;">
+      
+          <thead>
+              <tr>
+                  <th>Nombre Solicitante</th>
+                  <th>Primer Apellido Solicitante</th>
+                  <th>Segundo Apellido Solicitante</th>
+                  <th>Teléfono Solicitante</th>
+                  <th>Día de la Cita</th>
+                  <th>Hora de la Cita</th>
+                  <th>Nombre Infante</th>
+                  <th>Primer Apellido Infante</th>
+                  <th>Segundo Apellido Infante</th>
+                  <th>Descripción de la Cita</th>
+                  <th>Acciones</th>
+              </tr>
+          </thead>
+         <tbody id="list">
+            <!-- Las citas se agregarán aquí dinámicamente -->
+         </tbody>
+      </table>
+      <button id="clearButton" class="btn btn-danger mb-3" onclick="confirmClearStorage()" style="display: none;">Borrar Todas las Citas</button>
 
-     
+      <script>
+         function confirmClearStorage() {
+            if (confirm("¿Está seguro de que desea borrar todas las citas?")) {
+               clearStorage();
+            }
+         }
+      </script>
+  </div>
+
+  <script src="scripts/agendar.js"></script>
+
+
+   <!--<div id="list">
+   </div>
+   <script src="./scripts/agendar.js"></script>  -->
     
     
     
