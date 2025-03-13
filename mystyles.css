@@ -1,8 +1,7 @@
 body {
     font-family: poppins;
-    background-color: #bfe5ef;
-  /*  position: relative;
-    background: url('https://www.gaceta.unam.mx/wp-content/uploads/2022/03/220331-aca7-des-f1-autismo.jpg') no-repeat center center/cover;*/
+    background-color: #bfe5ef; /*color de fondo*/
+  
 }
 
 p{
@@ -17,16 +16,24 @@ p{
     padding: 45px 0;
     display: flex;
     align-items: center;
-    padding-bottom:80px ;
-
+    padding-bottom: 60px ;
+    }
    /*Con la siguiente clase del menú de navegación , agregamos espacio entre las palabras(a= los links)*/
 .menu-nav a{
     margin-right: 30px;
     }
-    .menu-nav a:hover{/*cambia el color cuando se pasa el mouse*/
-        color: rgb(221, 126, 37);
+.menu-nav a:hover{/*cambia el color cuando se pasa el mouse*/
+        color: rgb(255, 255, 255);
     }
-}
+    .nav-link {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.2rem;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    .nav-link:hover, .nav-link.active {
+        background-color: #bbaad1;
+        color: white;
+    }
 table{
     width: 90%;
     border: 1px solid #bfe5ef;
@@ -36,24 +43,6 @@ table{
     text-align: center;
 }
 
-/*.navbar-nav .nav-link {
-    color: #333;
-    font-weight: bold;
-}
-
-.navbar-nav .nav-link:hover {
-    color: #bbaad1;
-}*/
-
-/*.nav-link {
-    transition: background-color 0.3s ease;
-}
-
-.nav-link:hover,
-.nav-link.active {
-    background-color: #bbaad1;
-    border-radius: 5px;
-}*/
 /*Sección del Centro*/
 .hero {
     background: url('images/prescolar kids sin fondo.png') no-repeat center center/cover;
@@ -65,16 +54,7 @@ table{
     text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
     margin-top: 60px;
 }
-/*.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad según sea necesario 
-    z-index: 1;
-}*/
+
 .hero h2, .hero p {
     position: relative;
     z-index: 2;
@@ -98,12 +78,12 @@ table{
     border-radius: 50%;
     margin-left: auto;
     margin-right: auto;
-    width: 50%; /* Ajusta el tamaño de la imagen */
+    width: 10%; /* Ajusta el tamaño de la imagen */
     height: auto; /* Mantiene la proporción de la imagen */
     
 }
 .container img {
-    max-width: 100%;
+    max-width: 25%;
     height: auto;
     display: block;
     margin-left: auto;
@@ -112,7 +92,14 @@ table{
 .centered-image {
         margin-top: 0%; /* Ajusta el margen superior según sea necesario */
 }
+/* Efecto de movimiento en las imágenes */
+.hover-move {
+    transition: transform 0.3s ease;
+}
 
+.hover-move:hover {
+    transform: scale(1.05);
+}
 .about-container {
     display: flex;
     justify-content: space-between;

@@ -1,0 +1,94 @@
+body {
+    font-family: poppins;
+    background-color: #bbaad1; /* Color de fondo */
+}
+
+p {
+    line-height: 2;
+    color: #02162c;
+}
+
+/* Menú de navegación */
+.menu-nav {
+    height: 60px;
+    background-color: #fefbe9;
+    padding: 45px 0;
+    display: flex;
+    align-items: center;
+}
+
+.menu-nav a {
+    margin-right: 30px;
+}
+
+.menu-nav a:hover {
+    color: rgb(221, 126, 37);
+}
+
+table {
+    width: 90%;
+    border: 1px solid white;
+    border-collapse: collapse;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.hero {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    margin-top: 60px; /* Ajusta el margen superior según sea necesario */
+}
+
+.hero h2, .hero p {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+.container .btn {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 25px;
+}
+
+.imag-Center {
+    display: block;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centered-image {
+    margin-top: 0%; /* Ajusta el margen superior según sea necesario */
+}
+
+/* Efecto de movimiento en las imágenes */
+.hover-move {
+    transition: transform 0.3s ease;
+}
+
+.hover-move:hover {
+    transform: scale(1.05);
+}
