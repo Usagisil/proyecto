@@ -4,10 +4,21 @@ body {
   
 }
 
-p{
-    line-height: 2;
-    color: #02162c;
-    
+/*Estilo de los títulos*/
+h1  {
+    font-family: 'Lilita One';
+    color: rgb(21, 21, 105);
+    text-align: center;
+    margin-top: 20px; /* Espacio antes del h1 */
+    margin-bottom: 20px; /* Espacio después del h1 */
+}
+h2, h3 {
+    font-family: 'Lilita One';
+    color: rgb(21, 21, 105);
+}
+
+p, li, th, td {
+    font-family: 'Poppins', sans-serif;
 }
 /*Menú de navegación */
 .menu-nav {
@@ -72,6 +83,7 @@ table{
     padding: 10px 20px;
     font-size: 1.1rem;
     border-radius: 25px;
+    
 }
 .imag-Center{
     display: block;
