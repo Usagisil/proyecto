@@ -68,7 +68,7 @@ function displayCitas() {
             <td>${cita.primerApellidoInfante}</td>
             <td>${cita.segundoApellidoInfante}</td>
             <td>${cita.descripcionCita}</td>
-            <td><button class="btn btn-warning" onclick="deleteCita(${index})">Eliminar</button></td>
+            <td><button class="btn btn-warning" style="background-color: #ffe68b; padding: 5px 10px;" onclick="deleteCita(${index})">Eliminar</button></td>
         </tr>
         `;
         list.innerHTML += citaElement;

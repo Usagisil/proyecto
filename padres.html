@@ -7,6 +7,31 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> 
     <link rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="mystyles.css" rel="stylesheet">
+    <style>
+        /* Animación del camioncito */
+        .bus-container {
+          position: relative;
+          width: 150px;
+          height: 70px;
+          margin: 0 40px;
+        }
+    
+        .bus-image {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100px;
+          height: auto;
+          animation: drive 4s infinite linear;
+        }
+    
+        @keyframes drive {
+          0%   { transform: translateX(0); }
+          50%  { transform: translateX(30px); }
+          100% { transform: translateX(0); }
+        }
+        
+</style>
     
 </head>
 <body>
@@ -28,12 +53,16 @@
            
           
         </ul>
+         <!-- Camioncito entre enlaces y botón -->
+  <div class="bus-container">
+    <img src="images/camion.png" alt="Camioncito" class="bus-image">
+  </div>
      <a href="index.html" class="btn btn-danger ms-auto">Cerrar Sesión</a>
      </nav> 
-    <div class="container">
+    <div class="container" style="background: linear-gradient(to right, #bbaad1, #bfe5ef);"></div>
         <h1>📊 Sección para Padres</h1>
         <p>En el <strong>Centro de Apoyo a la Familia (CAF)</strong>, sabemos lo importante que es para los padres seguir de cerca el progreso de sus hijos. Por ello, hemos creado esta sección especial donde podrás acceder de manera segura a las evaluaciones y el plan de intervención de tu hijo/a.</p>
-    
+
         <h3>📈 ¿Qué encontrarás en esta sección?</h3>
         <ul>
             <li>✔️ <strong>Gráficas de Avance:</strong> Visualiza el progreso de tu hijo/a en distintas áreas de desarrollo.</li>
@@ -41,42 +70,37 @@
             <li>✔️ <strong>Historial de Evaluaciones:</strong> Consulta reportes anteriores y compara el crecimiento en cada etapa.</li>
             <li>✔️ <strong>Tarea Semanal para Casa:</strong> Encuentra actividades y sugerencias para reforzar el aprendizaje en el hogar.</li>
         </ul>
-    
-        
-    
-      <!--  <div class="button-container">
-            <a href="[ENLACE DE INICIO DE SESIÓN]" class="button">INICIAR SESIÓN</a>
-        </div>-->
-    
-    <!-- CTA Buttons -->
-      <!-- CTA Boxes -->
-      <div class="row text-center my-4">
-        <div class="col-md-3">
-            <div class="cta-box">
-                <img src="https://cdn.pixabay.com/animation/2023/03/19/15/09/15-09-56-389_512.gif" alt="Gráfica" class="img-fluid mt-3 hover-move">
-                <h3>Revisar Gráficas</h3>
-                <p>Visualiza el progreso de tu hijo/a en distintas áreas de desarrollo.</p>
+
+        <!-- CTA Buttons -->
+        <!-- CTA Boxes -->
+        <div class="row text-center my-4">
+            <div class="col-md-3">
+                <div class="cta-box">
+                    <img src="https://cdn.pixabay.com/animation/2023/03/19/15/09/15-09-56-389_512.gif" alt="Gráfica" class="img-fluid mt-3 hover-move">
+                    <h3>Revisar Gráficas</h3>
+                    <p>Visualiza el progreso de tu hijo/a en distintas áreas de desarrollo.</p>
+                </div>
             </div>
-        </div>
-        <div class="col-md-3">
-            <div class="cta-box">
-                <img src="https://cdn-icons-png.flaticon.com/512/11890/11890970.png" alt="Plan Actual" class="img-fluid mt-3 hover-move">
-                <h3>Revisar Plan Actual</h3>
-                <p>Conoce las estrategias, actividades y objetivos que se están trabajando.</p>
+            <div class="col-md-3">
+                <div class="cta-box">
+                    <img src="https://cdn-icons-png.flaticon.com/512/11890/11890970.png" alt="Plan Actual" class="img-fluid mt-3 hover-move">
+                    <h3>Revisar Plan Actual</h3>
+                    <p>Conoce las estrategias, actividades y objetivos que se están trabajando.</p>
+                </div>
             </div>
-        </div>
-        <div class="col-md-3">
-            <div class="cta-box">
-                <img src="https://cdn-icons-png.flaticon.com/512/2282/2282481.png" alt="Historial de Evaluaciones" class="img-fluid mt-3 hover-move">
-                <h3>Historial de Evaluaciones</h3>
-                <p>Consulta reportes anteriores y compara el crecimiento en cada etapa.</p>
+            <div class="col-md-3">
+                <div class="cta-box">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2282/2282481.png" alt="Historial de Evaluaciones" class="img-fluid mt-3 hover-move">
+                    <h3>Historial de Evaluaciones</h3>
+                    <p>Consulta reportes anteriores y compara el crecimiento en cada etapa.</p>
+                </div>
             </div>
-        </div>
-        <div class="col-md-3">
-            <div class="cta-box">
-                <img src="https://cdn.pixabay.com/photo/2020/12/07/20/56/therapy-5812852_1280.png" alt="Tarea semanal para Casa" class="img-fluid mt-3 hover-move">
-                <h3>Tarea semanal para Casa</h3>
-                <p>Encuentra actividades y sugerencias para reforzar el aprendizaje en el hogar.</p>
+            <div class="col-md-3">
+                <div class="cta-box">
+                    <img src="https://cdn.pixabay.com/photo/2020/12/07/20/56/therapy-5812852_1280.png" alt="Tarea semanal para Casa" class="img-fluid mt-3 hover-move" style="width:  1500px; height: 350px;">
+                    <h3>Tarea semanal para Casa</h3>
+                    <p>Encuentra actividades y sugerencias para reforzar el aprendizaje en el hogar.</p>
+                </div>
             </div>
         </div>
     </div>

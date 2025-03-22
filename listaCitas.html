@@ -1,78 +1,178 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contactanos</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> 
-    <link rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="mystyles.css" rel="stylesheet">
-    
-</head>
-<body>
-   
-    <!-- Barra de Navegación -->
-    <nav class="menu-nav d-flex align-items-center">
-      <div>
-         <a class="navbar-brand" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaDDpyVF623UHbQQfbAT318PhPMpJr4XO5rb4TLBGInxfQPMznuQ5pk7W0-aIm7JYcZkM&usqp=CAU">
-            <img src="images/logo_CAF-sin fondo.png" alt="Logo" height="110">
-         </a>
-      </div>
-      <ul class="nav">
-         <li class="nav-item"><a class="nav-link " href="iniciolog.html">Inicio</a></li>
-         <li class="nav-item"><a class="nav-link" href="recepcion.html">Recepción</a></li>
-         <li class="nav-item"><a class="nav-link" href="direccion.html">Dirección</a></li>
-         <li class="nav-item"><a class="nav-link" href="terapia.html">Terapeutas</a></li>
-         <li class="nav-item"><a class="nav-link" href="padres.html">Padres</a></li>
-         <li class="nav-item"><a class="nav-link" href="eventoslog.html">Eventos</a></li>
-        
-         
-      </ul>
-   <a href="index.html" class="btn btn-danger ms-auto">Cerrar Sesión</a>
-   </nav> 
-   <div class="container mt-4">
-      <h2>Lista de Citas</h2>
-      <table class="table table-bordered text-center" style="background-color: #bfe5ef; border-color: #bbaad1; border-width: 5px;">
-      
-          <thead>
-              <tr>
-                  <th>Nombre Solicitante</th>
-                  <th>Primer Apellido Solicitante</th>
-                  <th>Segundo Apellido Solicitante</th>
-                  <th>Teléfono Solicitante</th>
-                  <th>Día de la Cita</th>
-                  <th>Hora de la Cita</th>
-                  <th>Nombre Infante</th>
-                  <th>Primer Apellido Infante</th>
-                  <th>Segundo Apellido Infante</th>
-                  <th>Descripción de la Cita</th>
-                  <th>Acciones</th>
-              </tr>
-          </thead>
-         <tbody id="list">
-            <!-- Las citas se agregarán aquí dinámicamente -->
-         </tbody>
-      </table>
-      <button id="clearButton" class="btn btn-danger mb-3" onclick="confirmClearStorage()" style="display: none;">Borrar Todas las Citas</button>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contactanos</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
+  <link href="mystyles.css" rel="stylesheet" />
 
-      <script>
-         function confirmClearStorage() {
-            if (confirm("¿Está seguro de que desea borrar todas las citas?")) {
-               clearStorage();
-            }
-         }
-      </script>
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .custom-table-container {
+      background: linear-gradient(to right, #fefbe9, #bbaad1);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .custom-table-wrapper {
+      max-height: 400px;
+      overflow-y: auto;
+      overflow-x: auto;
+      border: 2px solid #fefbe9;
+      border-radius: 10px;
+    }
+
+    table {
+      width: 100%;
+      min-width: 1000px;
+      border-collapse: collapse;
+    }
+
+    thead th {
+      position: sticky;
+      top: 0;
+      background-color: #fefbe9;
+      z-index: 1;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+      vertical-align: middle;
+      border: 1px solid #fefbe9;
+      background-color: rgba(255, 255, 255, 0.85);
+      word-break: break-word;
+    }
+
+    .btn-icon {
+      border: none;
+      background: none;
+      color: #495057;
+      font-size: 18px;
+    }
+
+    .btn-icon:hover {
+      color: #dc3545;
+    }
+
+    .btn-edit:hover {
+      color: #0d6efd;
+    }
+  </style>
+   <style>
+      /* Animación del camioncito */
+      .bus-container {
+        position: relative;
+        width: 150px;
+        height: 70px;
+        margin: 0 40px;
+      }
+  
+      .bus-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: auto;
+        animation: drive 4s infinite linear;
+      }
+  
+      @keyframes drive {
+        0%   { transform: translateX(0); }
+        50%  { transform: translateX(30px); }
+        100% { transform: translateX(0); }
+      }
+      
+</style>
+</head>
+
+<body>
+
+<!-- Barra de Navegación -->
+<nav class="menu-nav d-flex align-items-center px-3 py-2 bg-light shadow-sm">
+  <div>
+    <a class="navbar-brand" href="#">
+      <img src="images/logo_CAF-sin fondo.png" alt="Logo" height="80">
+    </a>
+  </div>
+  <ul class="nav ms-4">
+    <li class="nav-item"><a class="nav-link" href="iniciolog.html">Inicio</a></li>
+    <li class="nav-item"><a class="nav-link" href="recepcion.html">Recepción</a></li>
+    <li class="nav-item"><a class="nav-link" href="direccion.html">Dirección</a></li>
+    <li class="nav-item"><a class="nav-link" href="terapia.html">Terapeutas</a></li>
+    <li class="nav-item"><a class="nav-link" href="padres.html">Padres</a></li>
+    <li class="nav-item"><a class="nav-link" href="eventoslog.html">Eventos</a></li>
+  </ul>
+   <!-- Camioncito entre enlaces y botón -->
+   <div class="bus-container">
+      <img src="images/camion.png" alt="Camioncito" class="bus-image">
+    </div>
+  <a href="index.html" class="btn btn-danger ms-auto">Cerrar Sesión</a>
+</nav>
+
+<!-- Contenido -->
+<div class="container mt-4 custom-table-container">
+  <h2 class="text-center mb-3">Lista de Citas</h2>
+
+  <div class="custom-table-wrapper">
+    <table class="table table-hover text-center">
+      <thead>
+        <tr>
+          <th>Nombre Solicitante</th>
+          <th>Primer Apellido</th>
+          <th>Segundo Apellido</th>
+          <th>Teléfono</th>
+          <th>Fecha</th>
+          <th>Hora</th>
+          <th>Nombre Infante</th>
+          <th>P. Apellido</th>
+          <th>S. Apellido</th>
+          <th>Descripción</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="list">
+        <!-- Aquí se agregarán dinámicamente las filas con JS -->
+        <!-- Ejemplo de fila -->
+        <tr>
+          <td>María</td>
+          <td>López</td>
+          <td>Ramírez</td>
+          <td>3123456789</td>
+          <td>21/03/2025</td>
+          <td>10:00 AM</td>
+          <td>Juan</td>
+          <td>López</td>
+          <td>Ramírez</td>
+          <td>Evaluación</td>
+          <td>
+            <button class="btn-icon btn-edit"><i class="bi bi-pencil-square"></i></button>
+            <button class="btn-icon"><i class="bi bi-trash3-fill"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
-  <script src="scripts/agendar.js"></script>
+  <button id="clearButton" class="btn btn-danger mt-3" onclick="confirmClearStorage()" style="display: none;">
+    Borrar Todas las Citas
+  </button>
+</div>
 
+<script>
+  function confirmClearStorage() {
+    if (confirm("¿Está seguro de que desea borrar todas las citas?")) {
+      clearStorage();
+    }
+  }
+</script>
 
-   <!--<div id="list">
-   </div>
-   <script src="./scripts/agendar.js"></script>  -->
-    
-    
-    
+<script src="scripts/agendar.js"></script>
 </body>
 </html>
+

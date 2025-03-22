@@ -7,6 +7,46 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> 
     <link rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" href="styles.css">
     <link href="mystyles.css" rel="stylesheet">
+    <style>
+        /* Animación del camioncito */
+        .bus-container {
+          position: relative;
+          width: 150px;
+          height: 70px;
+          margin: 0 40px;
+        }
+    
+        .bus-image {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100px;
+          height: auto;
+          animation: drive 4s infinite linear;
+        }
+    
+        @keyframes drive {
+          0%   { transform: translateX(0); }
+          50%  { transform: translateX(30px); }
+          100% { transform: translateX(0); }
+        }
+    
+        /* Nav personalizado */
+        .menu-nav {
+          padding: 10px 20px;
+          background-color: #ffffff;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    
+        .nav-link {
+          color: #333;
+          font-weight: 500;
+        }
+    
+        .nav-link:hover {
+          color: #0056b3;
+        }
+      </style>
 </head>
 <body>
     <!-- Barra de Navegación -->
@@ -23,15 +63,17 @@
            <li class="nav-item"><a class="nav-link" href="terapia.html">Terapeutas</a></li>
            <li class="nav-item"><a class="nav-link" href="padres.html">Padres</a></li>
            <li class="nav-item"><a class="nav-link" href="eventoslog.html">Eventos</a></li>
-          
-           
         </ul>
-     <a href="index.html" class="btn btn-danger ms-auto">Cerrar Sesión</a>
-     </nav> 
+         <!-- Camioncito entre enlaces y botón -->
+  <div class="bus-container">
+    <img src="images/camion.png" alt="Camioncito" class="bus-image">
+  </div>
+        <a href="index.html" class="btn btn-danger ms-auto">Cerrar Sesión</a>
+    </nav> 
     <!-- Formulario de Registro para Agendar Citas -->
-    <div class="container my-4">
+    <div class="container my-4"style="background: linear-gradient(to right, #bbaad1, #bfe5ef);">
         <h2 class="text-center">Agendar Cita</h2>
-        <form>
+        <form class="p-4 rounded shadow" style="background: linear-gradient(to right, #bbaad1, #bfe5ef);">
             <h4>Datos Padre, Madre o Tutor Solicitante</h4>
             <div class="mb-3">
                 <label for="nombreSolicitante" class="form-label">Nombre(s)</label>
@@ -80,13 +122,6 @@
                 <label for="segundoApellidoInfante" class="form-label">Segundo Apellido</label>
                 <input type="text" class="form-control" id="txtSegundoApellidoInfante" required>
             </div>
-            <!-- <div class="mb-3">
-                <label for="edadInfante" class="form-label">Edad</label>
-                <div class="d-flex">
-                    <input type="number" class="form-control me-2" id="txtEdadInfanteAnios" placeholder="Años" required>
-                    <input type="number" class="form-control" id="txtEdadInfanteMeses" placeholder="Meses" required>
-                </div>
-            </div>-->
             <div class="mb-3">
                 <label for="descripcionCita" class="form-label">Descripción del porqué solicita una cita</label>
                 <textarea class="form-control" id="txtDescripcionCita" rows="3" required></textarea>
@@ -94,8 +129,6 @@
             <button type="submit" class="btn btn-primary" onclick="agendar()">Agendar Cita</button>
         </form>
     </div>
-    
-    
     <script src="./scripts/agendar.js"></script>  
 </body>
 </html>

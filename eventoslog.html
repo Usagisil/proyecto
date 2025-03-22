@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,69 +7,142 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> 
     <link rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" href="styles.css">
     <link href="mystyles.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ffffff;
+            color: white;
+        }
+        .event-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 30px;
+        }
+        .event-card {
+            width: 300px;
+            background: linear-gradient(to bottom, #bbaad1, #fefbe9);
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            padding: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .event-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .event-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #121212;
+            margin-top: 10px;
+        }
+        .event-date {
+            font-size: 14px;
+            color: #444;
+            margin-bottom: 10px;
+        }
+        .register-btn {
+            display: inline-block;
+            background-color: #6c5b7b;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .register-btn:hover {
+            background-color: #5a4769;
+        }
+    </style>
+     <style>
+      /* Animación del camioncito */
+      .bus-container {
+        position: relative;
+        width: 150px;
+        height: 70px;
+        margin: 0 40px;
+      }
+  
+      .bus-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: auto;
+        animation: drive 4s infinite linear;
+      }
+  
+      @keyframes drive {
+        0%   { transform: translateX(0); }
+        50%  { transform: translateX(30px); }
+        100% { transform: translateX(0); }
+      }
+      
+</style>
 </head>
 <body>
-     <!-- Barra de Navegación -->
-    <nav class="menu-nav d-flex align-items-center">
-       <div>
-          <a class="navbar-brand" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaDDpyVF623UHbQQfbAT318PhPMpJr4XO5rb4TLBGInxfQPMznuQ5pk7W0-aIm7JYcZkM&usqp=CAU">
-             <img src="images/logo_CAF-sin fondo.png" alt="Logo" height="110">
-          </a>
-       </div>
-       <ul class="nav">
-          <li class="nav-item"><a class="nav-link " href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="recepcion.html">Recepción</a></li>
-          <li class="nav-item"><a class="nav-link" href="direccion.html">Dirección</a></li>
-          <li class="nav-item"><a class="nav-link" href="terapia.html">Terapeutas</a></li>
-          <li class="nav-item"><a class="nav-link" href="padres.html">Padres</a></li>
-          <li class="nav-item"><a class="nav-link" href="eventoslog.html">Eventos</a></li>
-          
-       </ul>
-    <a href="index.html" class="btn btn-danger ms-auto">Cerrar Sesión</a>
-    </nav> 
-    
-     <!-- Sección del centro -->
-     <!-- Título de la sección -->
-    <div class="container my-4">
-      <h2 class="text-center">Eventos</h2>
-      <!-- Tabla de eventos -->
-      <table class="table table-bordered text-center" style="background-color: #bfe5ef; border-color: #bbaad1; border-width: 5px;">
-          <thead style="background-color: #bbaad1; color: #bfe5ef;"></thead>
-           <tr>
-            <th>Fecha</th>
-            <th>Nombre del Evento</th>
-            <th>Flyer del Evento</th>
-            <th>Registro de Asistencia</th>
-           </tr>
-          </thead>
-          <tbody>
-           <tr>
-            <td>Sábado 5 de abril</td>
-            <td>Segundo Encuentro del Autismo</td>
-            <td><img src="https://scontent.fese1-1.fna.fbcdn.net/v/t39.30808-6/476495014_926087956354099_5503873639580368083_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=1k-yq1CzGGYQ7kNvgFHZUE2&_nc_oc=Adi5wuPLF0qPvxQrUuDLcrsi5Nj08EfFWvkuQnl6iEybG8wpAU4e68us2JB8Taq4LaT7Kt_GLhX4YwbvEya0slcJ&_nc_zt=23&_nc_ht=scontent.fese1-1.fna&_nc_gid=AtqvxwSghAMdZJj0i33_skb&oh=00_AYBBabJUj3KZKc5iCm7jflGk6i2ToG4QqNPhFh0lb0O9xw&oe=67C58D67" alt="Segundo encuentro del Autismo" class="img-fluid" style="max-width: 100px;"></td>
-            <td><a href="https://forms.gle/link1" target="_blank" class="btn btn-primary" style="background-color: #bbaad1; border-color: #bbaad1;">Registro</a></td>
-           </tr>
-           <tr>
-            <td>Sábado 13 de abril</td>
-            <td>Primer Encuentro de Autismo</td>
-            <td><img src="https://sanquintintv.com/wp-content/uploads/2024/04/primer-encuentro-autista.jpg?w=1024&h=1&crop=1" alt="Flyer Evento 2" class="img-fluid" style="max-width: 100px;"></td>
-            <td><a href="https://forms.gle/link2" target="_blank" class="btn btn-primary" style="background-color: #bbaad1; border-color: #bbaad1;">Registro</a></td>
-           </tr>
-           <tr>
-            <td>Domingo 27 de abril</td>
-            <td>Día Mundial del Autismo</td>
-            <td><img src="https://agendacultural.bajacalifornia.gob.mx/storage/eventos/dia-mundial-del-autismo-whatsapp-image-2024-04-19-at-5.16" alt="Flyer Evento 3" class="img-fluid" style="max-width: 100px;"></td>
-            <td><a href="https://forms.gle/link3" target="_blank" class="btn btn-primary" style="background-color: #bbaad1; border-color: #bbaad1;">Registro</a></td>
-           </tr>
-           <tr>
-            <td>Lunes a Viernes</td>
-            <td>Colectivo</td>
-            <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgQmXILtwnz6qM3UEfGKJqbADCwxJjguskOg&s" alt="Flyer Evento 4" class="img-fluid" style="max-width: 100px;"></td>
-            <td><a href="https://forms.gle/link4" target="_blank" class="btn btn-primary" style="background-color: #bbaad1; border-color: #bbaad1;">Registro</a></td>
-           </tr>
-          </tbody>
-      </table>
-  </div>
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
+ <!-- Barra de Navegación -->
+ <nav class="menu-nav d-flex align-items-center">
+    <div>
+       <a class="navbar-brand" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaDDpyVF623UHbQQfbAT318PhPMpJr4XO5rb4TLBGInxfQPMznuQ5pk7W0-aIm7JYcZkM&usqp=CAU">
+          <img src="images/logo_CAF-sin fondo.png" alt="Logo" height="110">
+       </a>
+    </div>
+    <ul class="nav">
+      <li class="nav-item"><a class="nav-link " href="iniciolog.html">Inicio</a></li>
+      <li class="nav-item"><a class="nav-link" href="recepcion.html">Recepción</a></li>
+      <li class="nav-item"><a class="nav-link" href="direccion.html">Dirección</a></li>
+      <li class="nav-item"><a class="nav-link" href="terapia.html">Terapeutas</a></li>
+      <li class="nav-item"><a class="nav-link" href="padres.html">Padres</a></li>
+      <li class="nav-item"><a class="nav-link" href="eventoslog.html">Eventos</a></li>
+    </ul>
+    <!-- Camioncito entre enlaces y botón -->
+  <div class="bus-container">
+   <img src="images/camion.png" alt="Camioncito" class="bus-image">
+ </div>
+ 
+    <a href="login.html" class="btn btn-primary ms-auto">Iniciar Sesión</a>
+ </nav> 
+    <h2 class="text-center mt-4">Próximos Eventos</h2>
+
+    <div class="event-container">
+        <!-- Evento 1 -->
+        <div class="event-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-Sa-WHVsbvuQIMKYo4Jf4ttDb9vY7srcQJQ&s" alt="Segundo Encuentro del Autismo">
+            <div class="event-title">Segundo Encuentro del Autismo</div>
+            <div class="event-date">Sábado 5 de abril</div>
+            <a href="https://forms.gle/link1" target="_blank" class="register-btn">Registro</a>
+        </div>
+
+        <!-- Evento 2 -->
+        <div class="event-card">
+            <img src="https://sanquintintv.com/wp-content/uploads/2024/04/primer-encuentro-autista.jpg?w=1024&h=1&crop=1" alt="Primer Encuentro de Autismo">
+            <div class="event-title">Primer Encuentro de Autismo</div>
+            <div class="event-date">Sábado 13 de abril</div>
+            <a href="https://forms.gle/link2" target="_blank" class="register-btn">Registro</a>
+        </div>
+
+        <!-- Evento 3 -->
+        <div class="event-card">
+            <img src="https://agendacultural.bajacalifornia.gob.mx/storage/eventos/dia-mundial-del-autismo-whatsapp-image-2024-04-19-at-5.16" alt="Día Mundial del Autismo">
+            <div class="event-title">Día Mundial del Autismo</div>
+            <div class="event-date">Domingo 27 de abril</div>
+            <a href="https://forms.gle/link3" target="_blank" class="register-btn">Registro</a>
+        </div>
+
+        <!-- Evento 4 -->
+        <div class="event-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgQmXILtwnz6qM3UEfGKJqbADCwxJjguskOg&s" alt="Colectivo">
+            <div class="event-title">Colectivo</div>
+            <div class="event-date">Lunes a Viernes</div>
+            <a href="https://forms.gle/link4" target="_blank" class="register-btn">Registro</a>
+        </div>
+    </div>
+
 </body>
 </html>

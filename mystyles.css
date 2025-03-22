@@ -1,7 +1,16 @@
 body {
     font-family: poppins;
-    background-color: #bfe5ef; /*color de fondo*/
+    background: linear-gradient(to right, #bbaad1, #bfe5ef); /*color de fondo gradiente*/
   
+}
+
+.fondo-login {
+    background-image: url('images/Edificio-CAF.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    margin: 0;  
 }
 
 /*Estilo de los títulos*/
@@ -45,13 +54,13 @@ p, li, th, td {
         background-color: #bbaad1;
         color: white;
     }
-table{
+table {
     width: 90%;
     border: 1px solid #bfe5ef;
     border-collapse: collapse;
     margin-right: 20px;
-    /*margin-left: 8%;*/
     text-align: center;
+    background-color: transparent; /* Fondo transparente */
 }
 
 /*Sección del Centro*/
