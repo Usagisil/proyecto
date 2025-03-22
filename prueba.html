@@ -1,94 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Inicio</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <link href="mystyles.css" rel="stylesheet">
-  <style>
-    /* Animación del camioncito */
-    .bus-container {
-      position: relative;
-      width: 150px;
-      height: 70px;
-      margin: 0 40px;
-    }
-
-    .bus-image {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100px;
-      height: auto;
-      animation: drive 4s infinite linear;
-    }
-
-    @keyframes drive {
-      0%   { transform: translateX(0); }
-      50%  { transform: translateX(30px); }
-      100% { transform: translateX(0); }
-    }
-
-    /* Nav personalizado */
-    .menu-nav {
-      padding: 10px 20px;
-      background-color: #ffffff;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    .nav-link {
-      color: #333;
-      font-weight: 500;
-    }
-
-    .nav-link:hover {
-      color: #0056b3;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> 
+    <link rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" href="styles.css">
+    <link href="mystyles.css" rel="stylesheet">
+    <style>
+      /* Animación del camioncito */
+      .bus-container {
+        position: relative;
+        width: 150px;
+        height: 70px;
+        margin: 0 40px;
+      }
+  
+      .bus-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: auto;
+        animation: drive 4s infinite linear;
+      }
+  
+      @keyframes drive {
+        0%   { transform: translateX(0); }
+        50%  { transform: translateX(30px); }
+        100% { transform: translateX(0); }
+      }
+      
+</style>
 </head>
 <body>
-
-<!-- Barra de Navegación -->
-<nav class="menu-nav d-flex align-items-center">
-  <!-- Logo -->
-  <div>
-    <a class="navbar-brand" href="#">
-      <img src="images/logo_CAF-sin fondo.png" alt="Logo" height="110">
-    </a>
-  </div>
-
-  <!-- Enlaces -->
-  <ul class="nav">
-    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-    <li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
-    <li class="nav-item"><a class="nav-link" href="about.html">Contáctanos</a></li>
-  </ul>
-
-  <!-- Camioncito entre enlaces y botón -->
+     <!-- Barra de Navegación -->
+    <nav class="menu-nav d-flex align-items-center">
+       <div>
+          <a class="navbar-brand" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaDDpyVF623UHbQQfbAT318PhPMpJr4XO5rb4TLBGInxfQPMznuQ5pk7W0-aIm7JYcZkM&usqp=CAU">
+             <img src="images/logo_CAF-sin fondo.png" alt="Logo" height="110">
+          </a>
+       </div>
+       <ul class="nav">
+          <li class="nav-item"><a class="nav-link " href="iniciolog.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="recepcion.html">Recepción</a></li>
+          <li class="nav-item"><a class="nav-link" href="direccion.html">Dirección</a></li>
+          <li class="nav-item"><a class="nav-link" href="terapia.html">Terapeutas</a></li>
+          <li class="nav-item"><a class="nav-link" href="padres.html">Padres</a></li>
+          <li class="nav-item"><a class="nav-link" href="eventoslog.html">Eventos</a></li>
+                   
+       </ul>
+        <!-- Camioncito entre enlaces y botón -->
   <div class="bus-container">
-    <img src="images/camion.png" alt="Camioncito" class="bus-image">
-  </div>
-  
-
-  <!-- Botón de sesión -->
-  <a href="login.html" class="btn btn-primary ms-auto">Iniciar Sesión</a>
-</nav>
-
-<!-- Sección del centro -->
-<div class="container center-section mt-4" style="background: linear-gradient(to right, #bbaad1, #bfe5ef);">
-  <h1>Centro de Apoyo a la Familia (CAF)</h1>
-  <p><strong>Centro de Apoyo a la Familia (CAF)</strong>... <!-- el resto del contenido que ya tienes --> </p>
-</div>
-
-<!-- CTA Buttons -->
-<div class="container text-center my-4" style="background: linear-gradient(to right, #bbaad1, #bfe5ef);">
-  <a href="agendar.html" class="btn" style="background-color: #bbaad1; color: black;">
-    Agenda tu cita
-  </a>
-  <a href="about.html" class="btn btn-info">Contáctanos</a>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   <img src="images/camion.png" alt="Camioncito" class="bus-image">
+ </div>
+    <a href="index.html" class="btn btn-danger ms-auto">Cerrar Sesión</a>
+    </nav> 
+    
+     <!-- Sección del centro -->
+   <div class="container center-section" style="background: linear-gradient(to right, #bbaad1, #bfe5ef);">
+      <h1>Centro de Apoyo a la Familia (CAF)</h1>
+      <p>En el <strong>Centro de Apoyo a la Familia (CAF)</strong>, contamos con más de 15 años de experiencia en el tratamiento del <strong>Trastorno del Espectro Autista (TEA)</strong>, brindando atención especializada a cientos de pacientes y desarrollando estudios formativos que nos han permitido comprender las dificultades en el desarrollo de habilidades comunicativas con fines sociales.</p>
+      
+      <h2>Compromiso con el Desarrollo y la Comunicación</h2>
+      <p>Uno de los principales desafíos que enfrentan los niños y niñas con TEA es la incapacidad de integrar los componentes de la comunicación dentro de una <strong>intención comunicativa clara</strong>. En este proceso, deben aprender a reconocer lo que desean expresar y complementarlo con gestos, movimientos corporales, conocimientos y el lenguaje oral adecuado.</p>
+      
+      <p>En <strong>CAF</strong>, conocemos cada paso necesario para que los niños logren conectar con su intención comunicativa y desarrollar habilidades que les permitan integrarse socialmente. Para ello, cada niño recibe un <strong>plan de intervención personalizado</strong>, adaptado a su perfil autista, ya que entendemos que el <strong>autismo se manifiesta en distintos grados</strong>, cada uno con características específicas.</p>
+      
+      <p>Para garantizar la mejor atención, realizamos una <strong>batería diagnóstica</strong> con un 95% de precisión, lo que nos permite identificar sus necesidades y definir estrategias de intervención efectivas. Nuestra metodología se basa en una enseñanza <strong>ordenada y estructurada</strong>, donde el diagnóstico y la <strong>intervención temprana</strong> juegan un papel clave en el desarrollo de las habilidades necesarias para el aprendizaje y la comunicación.</p>
+      
+      <h2>Nuestro Método</h2>
+      <p>Los padres que confían en nuestra experiencia pueden estar seguros de que, en <strong>CAF</strong>, sus pequeños están en un proceso de <strong>evolución continua</strong>. Además, fomentamos el <strong>aprendizaje a partir de eventos cotidianos</strong> y nos enfocamos en acciones estratégicas fundamentales como:</p>
+      <ul>
+        <li>Diagnóstico temprano</li>
+        <li>Constancia y seguimiento del plan de intervención</li>
+        <li>Estrategias de enseñanza estructurada</li>
+        <li>Involucramiento activo de los padres</li>
+      </ul>
+      
+      <h2>¿Necesitas Ayuda?</h2>
+      <p>Si tu hijo o hija presenta <strong>alertas tempranas</strong> de TEA, ha sido recientemente diagnosticado o enfrentas dificultades en su desarrollo que no sabes cómo abordar, <strong>en CAF podemos ayudarte</strong>.</p>
+      
+      <h2>Dificultades Comunes en Niños con TEA</h2>
+      <ul>
+        <li>Falta de atención</li>
+        <li>Problemas en el control de esfínteres</li>
+        <li>Retraso en el desarrollo de la comunicación verbal y no verbal</li>
+        <li>Desafíos conductuales como ansiedad, rabietas, berrinches, ensimismamiento o falta de respuesta ante estímulos sociales</li>
+        <li>Apegos excesivos</li>
+        <li>Movimientos repetitivos o interés inusual en objetos</li>
+      </ul>
+      
+      <h2>Únete a Nuestra Comunidad</h2>
+      <p>En <strong>CAF</strong>, estamos comprometidos con el desarrollo integral de los niños con TEA. <strong>Permítenos ser parte de su viaje</strong> hacia una comunicación más efectiva y una vida más plena.</p>
+    </div>
+   <!-- CTA Buttons -->
+   <div class="container text-center my-4" style="background: linear-gradient(to right, #bbaad1, #bfe5ef);">
+      <a href="agendar.html" class="btn" style="background-color: #bbaad1; color: black;">
+        Agenda tu cita
+      </a>
+      <a href="about.html" class="btn btn-info">Contáctanos</a>
+    </div>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
 </body>
 </html>
